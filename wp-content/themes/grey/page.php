@@ -29,6 +29,7 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
 
 		</main><!-- #main -->
+		<footer class="site-footer">Copyright © <?php echo date('Y'); ?> Grey Advokatbyrå. Alla rättigheter förbehålls.</footer>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>

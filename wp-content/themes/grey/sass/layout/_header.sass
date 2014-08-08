@@ -1,0 +1,40 @@
+#masthead
+  @include clearfix
+  padding: 20px
+  position: relative
+
+#site-navigation
+  display: none
+  @include clearfix
+  &.active
+    display: block
+  @include media($large-screen)
+    display: block
+  div
+    @include media($large-screen)
+      float: left
+      margin-right: 60px
+  a,
+  a:visited,
+  a:active
+    color: rgba(255, 255, 255, 0.7)
+  a:hover
+    color: #FFFFFF
+  li.current-menu-item a
+    font-weight: bold
+    color: #FFFFFF
+
+.menu-toggle-wrapper
+  float: left
+  @include media($large-screen)
+    display: none
+
+.site-branding
+  @include clearfix
+  float: right
+  @include media($large-screen)
+    position: absolute
+    right: 20px
+    bottom: 20px
+  img
+    display: block

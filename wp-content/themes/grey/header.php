@@ -18,22 +18,28 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/bg.jpg')">
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'grey' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-
+		<div class="menu-toggle-wrapper">
+			<button class="menu-toggle"><?php _e( 'Menu', 'grey' ); ?></button>
+		</div>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', 'grey' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			<?php wp_nav_menu( array( 'theme_location' => 'services' ) ); ?>
 			<?php wp_nav_menu( array( 'theme_location' => 'language' ) ); ?>
 		</nav>
 
 		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			<div class="site-title">
+				<?php if ( get_header_image() ) : ?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img src="<?php header_image(); ?>" alt="Logo">
+				</a>
+				<?php endif; // End header image check. ?>
+			</div>
 		</div>
 
 	</header>
