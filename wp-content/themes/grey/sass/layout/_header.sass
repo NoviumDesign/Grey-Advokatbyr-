@@ -2,12 +2,30 @@
   @include clearfix
   padding: 20px
   position: relative
+  font-size: 16px
+  font-weight: normal
+
+#mobile-navigation
+  display: none
+  position: absolute
+  width: 100%
+  top: 80px
+  left: 0
+  background-color: rgba(176, 175, 178, 1)
+  &.active
+    display: block
+  a
+    display: block
+    color: #FFFFFF
+    padding: 7px 10px 7px 10px
+    border-bottom: $base-border
+    &:hover
+      background-color: darken(rgba(176, 175, 178, 1), 15)
+
 
 #site-navigation
   display: none
   @include clearfix
-  &.active
-    display: block
   @include media($large-screen)
     display: block
   div
@@ -17,12 +35,26 @@
   a,
   a:visited,
   a:active
-    color: rgba(255, 255, 255, 0.7)
+    color: rgba(0, 0, 0, 0.7)
   a:hover
-    color: #FFFFFF
-  li.current-menu-item a
+    color: #000000
+  li.current-menu-item > a
     font-weight: bold
-    color: #FFFFFF
+    color: #000000
+
+  .sub-menu
+    display: none
+    margin-left: 10px
+    &.active
+      display: block
+
+  li.current-menu-parent
+    > a
+      color: #000000
+      font-weight: bold
+    .sub-menu
+      display: block
+
 
 .menu-toggle-wrapper
   float: left
@@ -38,3 +70,7 @@
     bottom: 20px
   img
     display: block
+    width: 80%
+    float: right
+    @include media($large-screen)
+      width: 100%
