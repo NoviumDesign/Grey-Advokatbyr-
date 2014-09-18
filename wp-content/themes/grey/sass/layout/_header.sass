@@ -1,17 +1,18 @@
 #masthead
   @include clearfix
-  padding: 20px
+  padding: 20px 20px 15px 20px
   position: relative
   font-size: 16px
   font-weight: normal
 
 #mobile-navigation
+  z-index: 1
   display: none
   position: absolute
   width: 100%
-  top: 80px
+  top: 70px
   left: 0
-  background-color: #B6B6B6
+  background-color: $blue-color
   &.active
     display: block
   a
@@ -20,7 +21,7 @@
     padding: 7px 10px 7px 10px
     border-bottom: $base-border
     &:hover
-      background-color: darken(#B6B6B6, 15)
+      background-color: lighten($blue-color, 10%)
 
 
 #site-navigation
@@ -38,6 +39,12 @@
     color: rgba(0, 0, 0, 0.7)
   a:hover
     color: #000000
+
+  li
+    display: inline
+    float: left
+    margin-right: 30px
+
   li.current-menu-item > a,
   .menu > li.menu-item-language-current > a
     font-weight: bold
@@ -60,7 +67,11 @@
     display: block
     margin: 0
 
+.menu-toggle
+  background-color: $blue-color
 
+  &:hover
+    background-color: lighten($blue-color, 10%)
 
 .menu-toggle-wrapper
   float: left
@@ -72,8 +83,8 @@
   float: right
   @include media($large-screen)
     position: absolute
-    right: 20px
-    bottom: 20px
+    right: 50px
+    bottom: 5px
   img
     display: block
     width: 80%

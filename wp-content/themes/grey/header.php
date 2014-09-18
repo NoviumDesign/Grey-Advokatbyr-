@@ -18,35 +18,35 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> style="background-image: url('<?php the_field('bg-image'); ?>')">
+<body <?php body_class(); ?>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'grey' ); ?></a>
+  <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'grey' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="menu-toggle-wrapper">
-			<button class="menu-toggle"><?php _e( 'Menu', 'grey' ); ?></button>
-		</div>
-		<nav id="mobile-navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			<?php wp_nav_menu( array( 'theme_location' => 'services' ) ); ?>
-			<?php wp_nav_menu( array( 'theme_location' => 'language' ) ); ?>		
-		</nav>	
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			<?php wp_nav_menu( array( 'theme_location' => 'services' ) ); ?>
-			<?php wp_nav_menu( array( 'theme_location' => 'language' ) ); ?>
-		</nav>
+  <header id="masthead" class="site-header" role="banner">
+    <div class="menu-toggle-wrapper">
+      <button class="menu-toggle"><?php _e( 'Menu', 'grey' ); ?></button>
+    </div>
+    <nav id="mobile-navigation">
+      <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+        <input type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="search" id="search" placeholder="Sök">
+      </form>
+      <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+      <?php wp_nav_menu( array( 'theme_location' => 'language' ) ); ?>    
+    </nav>  
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+      <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+    </nav>
 
-		<div class="site-branding">
-			<div class="site-title">
-				<?php if ( get_header_image() ) : ?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<img src="<?php header_image(); ?>" alt="Logo">
-				</a>
-				<?php endif; // End header image check. ?>
-			</div>
-		</div>
+    <div class="site-branding">
+      <div class="site-title">
+        <?php if ( get_header_image() ) : ?>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+          <img src="<?php header_image(); ?>" alt="Logo">
+        </a>
+        <?php endif; // End header image check. ?>
+      </div>
+    </div>
 
-	</header>
+  </header>
 
-	<div id="content" class="site-content">
+  <div id="content" class="site-content">

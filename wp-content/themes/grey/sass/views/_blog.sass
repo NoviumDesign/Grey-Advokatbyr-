@@ -1,7 +1,11 @@
 body.blog, body.single-post
   .entry-header
     @include span-columns(12)
-    padding: 0px 0px 22px 0px
+
+    .entry-title
+      a
+        color: $blue-color
+        font-weight: 700
 
   .entry-content, .entry-header, .entry-footer
     padding-right: 20px
@@ -26,7 +30,6 @@ body.blog
 body.single-post
   .entry-header
     border-bottom: $base-border
-    margin-bottom: 20px
 
 .site-main
   @include media($medium-screen)

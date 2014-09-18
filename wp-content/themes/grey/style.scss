@@ -18,8 +18,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "sass/vendor/neat/neat";
 @import "sass/base/base";
 
-@import "sass/layout/header";
 @import "sass/layout/general";
+@import "sass/layout/header";
+@import "sass/layout/hero-header";
+@import "sass/layout/sidebar";
 
 @import "sass/views/employees";
 @import "sass/views/blog";

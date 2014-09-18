@@ -13,6 +13,22 @@
 
 get_header(); ?>
 
+<header class="hero">
+	<div class="hero-headline-container">
+		<h1 class="hero-headline"><?php the_field('headline'); ?></h1>
+	</div>
+	<div class="hero-navigation-container">
+		<div class="search-container">
+			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+				<input type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="search" id="search" placeholder="Sök">
+			</form>
+		</div>
+		<div class="language-nav-container">
+	    <?php wp_nav_menu( array( 'theme_location' => 'language' ) ); ?>
+		</div>
+	</div>
+</header>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 

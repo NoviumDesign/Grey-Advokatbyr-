@@ -1,62 +1,52 @@
-body
-  background-position: center top
-  background-repeat: no-repeat
-  background-attachment: fixed
+$primary-font-color: rgb(32, 32, 32)
+$blue-color: #27577F
+$grey-color: #EDEDED
+$primary-font-size: 20px
+$primary-h1-font-size: 31px
+
+h1, h2, h3, h4, h5, h6
+  color: $primary-font-color
+  font-family: $sans-serif
+  font-weight: 700
+
+h1
+  font-size: $primary-h1-font-size
+  color: $blue-color
+  border-bottom: 1px solid $primary-font-color
+  padding-bottom: 15px
+  margin-bottom: 19px
+
+p
+  font-size: $primary-font-size
 
 #page
+  margin-left: auto
+  margin-right: auto
+
   @include media($medium-screen)
-    width: 80%
-    max-width: 1000px
+    max-width: 1200px
 
 .site-content
   @include clearfix
-  background-color: rgba(133, 133, 133, 0.5)
-  padding: 20px 60px 20px 20px
+  background-color: #FFF
 
 #primary
   @include media($large-screen)
-    @include span-columns(9)
+    @include span-columns(8)
+
 #secondary
+  background-color: $grey-color
   display: none
   @include media($large-screen)
     display: block
-    @include span-columns(3)
+    @include span-columns(4)
     @include omega
-    padding-left: 10px
+    padding: 20px
 
 .site-footer
-  color: #FFFFFF
+  color: #C2C2C2
   font-size: 16px
   margin-top: 60px
 
-aside
-  h1
-    font-family: $base-font-family
-    font-weight: bold
-    font-size: 19px
-    text-transform: uppercase
-    margin-bottom: 8px
-  li
-    line-height: $base-line-height * 0.65
-    margin-bottom: 15px
-  a
-    font-weight: normal
-    font-size: 16px
-    color: lighten(#000000, 20%)
-    &:vistited
-      color: lighten(#000000, 20%)
-    &:hover
-      color: lighten(#000000, 20%)
-      text-decoration: underline
-
 .main-content
-  @include media($medium-screen)
-    border-top: $base-border
-    border-right: $base-border
-    padding: 20px 20px 20px 30px
-
-.entry-header
-  @include media($medium-screen)
-    padding: 10px 10px 22px 30px
-  @include media($large-screen)
-    @include span-columns(11)
+  padding: 20px
