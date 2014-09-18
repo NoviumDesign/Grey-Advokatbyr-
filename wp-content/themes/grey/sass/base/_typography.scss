@@ -24,10 +24,13 @@ h6 {
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
 }
 
-h1 {
-  font-size: $h1-font-size;
+h1, h1 > a.header {
   color: #FFFFFF;
   font-weight: 400;
+}
+
+h1 {
+  font-size: $h1-font-size;
 }
 
 h2 {

@@ -1,3 +1,33 @@
+body.blog, body.single-post
+  .entry-header
+    @include span-columns(12)
+    padding: 0px 0px 22px 0px
+
+  .entry-content, .entry-header, .entry-footer
+    padding-right: 20px
+    padding-left: 30px
+
+  main.site-main
+    padding-right: 0px
+    padding-left: 0px
+
+  nav.post-navigation
+    display: none
+
+  #secondary
+    margin-top: 20px
+
+body.blog
+  article
+    border-bottom: $base-border
+    padding-bottom: 30px
+    margin-bottom: 30px
+
+body.single-post
+  .entry-header
+    border-bottom: $base-border
+    margin-bottom: 20px
+
 .site-main
   @include media($medium-screen)
     border-right: $base-border

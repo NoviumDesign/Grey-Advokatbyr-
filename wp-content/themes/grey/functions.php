@@ -109,6 +109,18 @@ function grey_scripts() {
 	}
 }
 
+function grey_posted_on() {
+  printf( __( '<span class="sep">Posted on </span><time class="entry-date" datetime="%3$s" pubdate>%4$s</time><span class="by-author"> <span class="sep">'),
+    esc_url( get_permalink() ),
+    esc_attr( get_the_time() ),
+    esc_attr( get_the_date( 'c' ) ),
+    esc_html( get_the_date() ),
+    esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+    esc_attr( sprintf( __( 'View all posts by %s' ), get_the_author() ) ),
+    get_the_author()
+  );
+}
+
 add_action( 'wp_enqueue_scripts', 'grey_scripts' );
 
 /**

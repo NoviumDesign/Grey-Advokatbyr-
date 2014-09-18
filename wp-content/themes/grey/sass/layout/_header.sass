@@ -11,7 +11,7 @@
   width: 100%
   top: 80px
   left: 0
-  background-color: rgba(176, 175, 178, 1)
+  background-color: #B6B6B6
   &.active
     display: block
   a
@@ -20,7 +20,7 @@
     padding: 7px 10px 7px 10px
     border-bottom: $base-border
     &:hover
-      background-color: darken(rgba(176, 175, 178, 1), 15)
+      background-color: darken(#B6B6B6, 15)
 
 
 #site-navigation
@@ -38,7 +38,8 @@
     color: rgba(0, 0, 0, 0.7)
   a:hover
     color: #000000
-  li.current-menu-item > a
+  li.current-menu-item > a,
+  .menu > li.menu-item-language-current > a
     font-weight: bold
     color: #000000
 
@@ -54,6 +55,11 @@
       font-weight: bold
     .sub-menu
       display: block
+
+  .sub-menu.submenu-languages
+    display: block
+    margin: 0
+
 
 
 .menu-toggle-wrapper
