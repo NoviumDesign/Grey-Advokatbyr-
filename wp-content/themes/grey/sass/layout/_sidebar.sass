@@ -1,22 +1,29 @@
 .widget-title
-  font-size: 32px
+  font-size: $primary-h1-font-size
   text-transform: none
 
 aside
   border-bottom: 8px solid white
-  padding-bottom: 30px
-  margin-bottom: 60px
+  padding-bottom: 25px
+  margin-bottom: 40px
+  h1
+    width: 100%
   ul
+    width: 100%
     list-style-type: square
     padding-left: 24px
+    +media($large-screen)
+      width: 90%
   li
     color: #6F8798
+    margin-top: -3px
     margin-bottom: 15px
-    line-height: 1em
+    line-height: 23px
   a
-    font-weight: 300
+    font-weight: normal
     font-size: $primary-font-size
     color: $blue-color
+    line-height: 0px
     &:vistited
       color: $blue-color
     &:hover

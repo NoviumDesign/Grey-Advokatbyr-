@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Medarbetare
+Template Name: Verksamhetsområden
 */
 
 get_header(); ?>
@@ -43,7 +43,7 @@ get_header(); ?>
 </div>
 <div id="secondary" class="widget-area" role="complementary">
   <?php
-  if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-coworkers') ) :
+  if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-businessarea') ) :
   endif; ?>
   <?php get_footer(); ?>
 </div>

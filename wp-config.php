@@ -87,4 +87,5 @@ if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Anger WordPress-värden och inkluderade filer. */
+define('CONCATENATE_SCRIPTS', false);
 require_once(ABSPATH . 'wp-settings.php');

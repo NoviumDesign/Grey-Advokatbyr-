@@ -11,7 +11,6 @@
 <?php else: ?>
 <header class="hero" style="background: url('get_theme_root(images/header-background.jpg'))">
 <?php endif; ?>
-
 	<div class="hero-headline-container">
 		<h1 class="hero-headline"><?php the_field('headline'); ?></h1>
 	</div>
@@ -26,6 +25,7 @@
 		</div>
 	</div>
 </header><!-- .entry-header -->
+
 <div id="primary" class="content-area">
 	<div class="main-content">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>

@@ -5,6 +5,9 @@
   font-size: 16px
   font-weight: normal
 
+  +media($medium-screen)
+    padding-top: 32px
+
 #mobile-navigation
   z-index: 1
   display: none
@@ -23,8 +26,13 @@
     &:hover
       background-color: lighten($blue-color, 10%)
 
+  .sub-menu
+    padding-left: 30px
+
 
 #site-navigation
+  position: relative
+  top: 4px
   display: none
   @include clearfix
   @include media($large-screen)
@@ -40,10 +48,16 @@
   a:hover
     color: #000000
 
+  .menu-huvudmeny-container
+    width: 70%
+
   li
     display: inline
     float: left
-    margin-right: 30px
+    margin-right: 25px
+
+    &:last-child
+      margin-right: 0
 
   li.current-menu-item > a,
   .menu > li.menu-item-language-current > a
@@ -69,6 +83,7 @@
 
 .menu-toggle
   background-color: $blue-color
+  padding: 0.6em 1em
 
   &:hover
     background-color: lighten($blue-color, 10%)
@@ -80,14 +95,20 @@
 
 .site-branding
   @include clearfix
+  max-width: 60%
   float: right
+  margin-right: 0%
+  @include media($medium-screen)
+    max-width: 30%
   @include media($large-screen)
+    max-width: 20%
     position: absolute
     right: 50px
     bottom: 5px
   img
     display: block
-    width: 80%
+    width: 100%
     float: right
-    @include media($large-screen)
-      width: 100%
+    +media($large-screen)
+      width: 95%
+      margin-right: 35%

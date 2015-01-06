@@ -1,8 +1,11 @@
 $primary-font-color: rgb(32, 32, 32)
 $blue-color: #27577F
 $grey-color: #EDEDED
-$primary-font-size: 20px
-$primary-h1-font-size: 31px
+$primary-font-size: 16px
+$primary-h1-font-size: 29px
+$footer-font-color: #B1B1B1
+$link-color: #39809e
+$border-color: #444444
 
 h1, h2, h3, h4, h5, h6
   color: $primary-font-color
@@ -12,12 +15,23 @@ h1, h2, h3, h4, h5, h6
 h1
   font-size: $primary-h1-font-size
   color: $blue-color
-  border-bottom: 1px solid $primary-font-color
+  border-bottom: 1px solid $border-color
   padding-bottom: 15px
   margin-bottom: 19px
-
-p
+  word-wrap: break-word
+  width: 100%
+  +media($medium-screen)
+    width: 95%
+  +media($large-screen)
+    width: 85%
+  
+p, .entry-date, .post-edit-link
   font-size: $primary-font-size
+  font-weight: normal
+  line-height: 24px
+
+a
+  color: $link-color
 
 #page
   margin-left: auto
@@ -27,8 +41,13 @@ p
     max-width: 1200px
 
 .site-content
+  position: relative
   @include clearfix
   background-color: #FFF
+  padding-bottom: 125px
+
+  +media($medium-screen)
+    padding-bottom: 70px
 
 #primary
   @include media($large-screen)
@@ -41,12 +60,25 @@ p
     display: block
     @include span-columns(4)
     @include omega
+    margin-right: 0
     padding: 20px
 
 .site-footer
-  color: #C2C2C2
-  font-size: 16px
-  margin-top: 60px
+  position: absolute
+  bottom: 0
+  color: $footer-font-color
+  font-weight: normal
+  font-size: 15px
+  background-color: #FFF
+  padding: 20px
+
+.entry-content
+  p
+    width: 100%
+    +media($medium-screen)
+      width: 95%
+    +media($large-screen)
+      width: 85%
 
 .main-content
   padding: 20px

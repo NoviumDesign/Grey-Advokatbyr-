@@ -43,6 +43,7 @@ function grey_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'grey' ),
+		'mobile' => __( 'Mobile Menu', 'grey' ),
 		'services' => __( 'Services', 'grey' ),
 		'language' => __( 'Language selector', 'grey' ),
 	) );
@@ -87,6 +88,28 @@ function grey_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+}
+if ( function_exists('register_sidebar') ) {
+  register_sidebar(array(
+    'name' => 'sidebar-coworkers',
+    'id' => 'sidebar-coworkers',
+    'description' => '',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+  ));
+}
+if ( function_exists('register_sidebar') ) {
+  register_sidebar(array(
+    'name' => 'sidebar-businessarea',
+    'id' => 'sidebar-businessarea',
+    'description' => '',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+  ));
 }
 add_action( 'widgets_init', 'grey_widgets_init' );
 

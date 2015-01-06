@@ -30,7 +30,7 @@
       <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
         <input type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="search" id="search" placeholder="Sök">
       </form>
-      <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+      <?php wp_nav_menu( array( 'theme_location' => 'mobile' ) ); ?>
       <?php wp_nav_menu( array( 'theme_location' => 'language' ) ); ?>    
     </nav>  
     <nav id="site-navigation" class="main-navigation" role="navigation">
